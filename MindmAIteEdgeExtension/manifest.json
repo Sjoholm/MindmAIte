@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "MindMAIte",
+    "version": "1.0",
+    "description": "Creates a Mind map from the selected text using AI.",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "contextMenus",
+        "tabs",
+		"scripting"
+    ],
+    "host_permissions": [
+        "https://api.openai.com/*",
+        "https://quickchart.io/*"
+    ],
+    "icons": {
+        "48": "icons/icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "icons/icon.png"
+        }
+    },
+	"web_accessible_resources": [
+        {
+            "resources": ["placeholder.html", "placeholder.js"],
+            "matches": ["<all_urls>"],
+            "use_dynamic_url": false
+        }
+    ]
+}
